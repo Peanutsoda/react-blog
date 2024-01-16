@@ -21,15 +21,15 @@ function App() {
       <h4>ReactBlog</h4>
      </div>
 
-     <button onClick={()=>{
-      글제목.sort();
+    <button onClick={()=>{
+       const 정렬된제목 = [...글제목].sort();
+       글제목변경(정렬된제목);
     }}>가나다순정렬</button>
 
      <button onClick={()=>{
-        글제목[0] = '여자코트 추천';
-        글제목변경(글제목);
-        //let copy = [...글제목];
-        //copy[0] = '여자코트 추천';
+        let copy = [...글제목];
+        copy[0] = '여자코트 추천';
+        글제목변경(copy);
      }}>글수정</button>
 
      <div className='list'>
